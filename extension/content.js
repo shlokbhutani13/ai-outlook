@@ -47,14 +47,15 @@ function injectButton() {
       });
 
       if (!response.ok) {
-        throw new Error(`Server error: ${response.status}`);
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err.error || `Server error: ${response.status}`);
       }
 
       const data = await response.json();
       showPopup(data.reply);
     } catch (err) {
       console.error("Button click error:", err);
-      alert("Error connecting to AI server");
+      alert(err.message || "Error connecting to AI server");
     }
   };
 
@@ -148,14 +149,14 @@ function showPopup(text) {
       await navigator.clipboard.writeText(textarea.value);
       const copyBtn = document.getElementById("copy-btn");
       const oldText = copyBtn.innerText;
-      copyBtn.innerText = "Copied!";
+      copyBtn.innerText = "Copied";
       setTimeout(() => {
         copyBtn.innerText = oldText;
       }, 1200);
     } catch (err) {
       textarea.select();
       document.execCommand("copy");
-      alert("Copied!");
+      alert("Copied");
     }
   };
 
