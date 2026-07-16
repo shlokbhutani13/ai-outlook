@@ -1,0 +1,12 @@
+:root{font-family:"Segoe UI",system-ui,sans-serif;color:#242424;background:#f7f7f7}
+*{box-sizing:border-box}body{margin:0}main{max-width:520px;margin:0 auto;padding:28px 20px}
+.eyebrow{margin:0 0 8px;color:#0f6cbd;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+h1{margin:0 0 8px;font-size:30px}.intro,.privacy,#status{color:#616161;line-height:1.5}
+fieldset{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 16px;padding:0;border:0}legend{width:100%;margin-bottom:8px;font-weight:650}
+fieldset label{padding:9px 12px;border:1px solid #c8c6c4;border-radius:8px;background:white}
+button{min-height:44px;padding:10px 14px;border:1px solid #8a8886;border-radius:8px;background:white;font-weight:650;cursor:pointer}
+button.primary{border-color:#0f6cbd;background:#0f6cbd;color:white}button:disabled{opacity:.55;cursor:wait}
+section{margin-top:22px}section label{display:block;margin-bottom:8px;font-weight:650}
+textarea{width:100%;padding:12px;border:1px solid #8a8886;border-radius:8px;font:inherit;line-height:1.5;resize:vertical;background:white}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.privacy{margin-top:28px;font-size:12px}
+:focus-visible{outline:3px solid #60a5fa;outline-offset:2px}@media(max-width:360px){.actions button{width:100%}}

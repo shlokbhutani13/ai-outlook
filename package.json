@@ -1,17 +1,28 @@
 {
   "name": "ai-outlook",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "An Outlook add-in that drafts editable email replies through a server-side AI provider.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test",
+    "check": "node --check app.js && node --check server.js && node --check src/*.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": ["outlook", "office-addin", "email", "openrouter"],
+  "author": "Shlok Bhutani",
+  "license": "MIT",
   "dependencies": {
-    "cors": "^2.8.6",
     "dotenv": "^17.4.0",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "office-addin-dev-certs": "^1.13.5",
+    "supertest": "^7.1.4"
   }
 }

@@ -1,15 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>AI Reply</title>
-</head>
-<body>
-  <h2>AI Email Assistant</h2>
-
-  <button id="generate">Generate Reply</button>
-
-  <pre id="output"></pre>
-
-  <script src="taskpane.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Outlook</title>
+    <link rel="stylesheet" href="taskpane.css" />
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Outlook reply assistant</p>
+      <h1>Draft a reply</h1>
+      <p class="intro">Choose a tone, review the draft, then open it in Outlook.</p>
+      <fieldset>
+        <legend>Tone</legend>
+        <label><input type="radio" name="tone" value="concise" checked /> Concise</label>
+        <label><input type="radio" name="tone" value="warm" /> Warm</label>
+        <label><input type="radio" name="tone" value="formal" /> Formal</label>
+      </fieldset>
+      <button class="primary" id="generate" type="button">Generate reply</button>
+      <p id="status" role="status" aria-live="polite"></p>
+      <section id="result" hidden>
+        <label for="reply">Reply draft</label>
+        <textarea id="reply" rows="10"></textarea>
+        <div class="actions">
+          <button class="primary" id="open-reply" type="button">Open reply draft</button>
+          <button id="copy" type="button">Copy</button>
+        </div>
+      </section>
+      <p class="privacy">Message text is sent to the configured model provider when you generate a reply.</p>
+    </main>
+    <script src="office-adapter.js"></script>
+    <script src="taskpane.js"></script>
+  </body>
 </html>
