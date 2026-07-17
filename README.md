@@ -2,6 +2,11 @@
 
 AI Outlook is a read-mode Outlook add-in that drafts an editable response to the message you have open. You choose a concise, warm, or formal tone, review the result in the task pane, then copy it or open a prefilled Outlook reply form.
 
+## See it in action
+
+- [Project overview in my portfolio](https://shlokbhutani13.github.io/)
+- [Source code on GitHub](https://github.com/shlokbhutani13/ai-outlook)
+
 ## How it works
 
 1. Office.js reads the open message after you press **Generate reply**.
